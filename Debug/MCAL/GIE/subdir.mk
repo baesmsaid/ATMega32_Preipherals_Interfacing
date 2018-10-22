@@ -4,32 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../App/Lab_1.c \
-../App/_Lab_05_LCD.c \
-../App/_Lab_07_ADC.c \
-../App/_Lab_2_SevSegments.c \
-../App/_Lab_3_Keypad.c \
-../App/_lab_04_SevSegmentsMux.c 
+../MCAL/GIE/GIE.c 
 
 OBJS += \
-./App/Lab_1.o \
-./App/_Lab_05_LCD.o \
-./App/_Lab_07_ADC.o \
-./App/_Lab_2_SevSegments.o \
-./App/_Lab_3_Keypad.o \
-./App/_lab_04_SevSegmentsMux.o 
+./MCAL/GIE/GIE.o 
 
 C_DEPS += \
-./App/Lab_1.d \
-./App/_Lab_05_LCD.d \
-./App/_Lab_07_ADC.d \
-./App/_Lab_2_SevSegments.d \
-./App/_Lab_3_Keypad.d \
-./App/_lab_04_SevSegmentsMux.d 
+./MCAL/GIE/GIE.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-App/%.o: ../App/%.c
+MCAL/GIE/%.o: ../MCAL/GIE/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: AVR Compiler'
 	avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"

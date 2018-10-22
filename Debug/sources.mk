@@ -8,6 +8,7 @@ ASM_SRCS :=
 C_SRCS := 
 S_UPPER_SRCS := 
 O_SRCS := 
+FLASH_IMAGE := 
 ELFS := 
 OBJS := 
 ASM_DEPS := 
@@ -22,7 +23,10 @@ SUBDIRS := \
 App \
 HAL/BCDSevSegments \
 HAL/Keypad \
+HAL/LCD \
 HAL/SevSegments \
+MCAL/ADC \
 MCAL/DIO \
+MCAL/GIE \
 . \
 

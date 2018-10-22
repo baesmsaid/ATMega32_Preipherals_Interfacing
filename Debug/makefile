@@ -8,8 +8,11 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include MCAL/GIE/subdir.mk
 -include MCAL/DIO/subdir.mk
+-include MCAL/ADC/subdir.mk
 -include HAL/SevSegments/subdir.mk
+-include HAL/LCD/subdir.mk
 -include HAL/Keypad/subdir.mk
 -include HAL/BCDSevSegments/subdir.mk
 -include App/subdir.mk
@@ -37,6 +40,9 @@ endif
 LSS += \
 ATMega32_Preipherals_Interfacing.lss \
 
+FLASH_IMAGE += \
+ATMega32_Preipherals_Interfacing.hex \
+
 SIZEDUMMY += \
 sizedummy \
 
@@ -58,6 +64,12 @@ ATMega32_Preipherals_Interfacing.lss: ATMega32_Preipherals_Interfacing.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 
+ATMega32_Preipherals_Interfacing.hex: ATMega32_Preipherals_Interfacing.elf
+	@echo 'Create Flash image (ihex format)'
+	-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ATMega32_Preipherals_Interfacing.elf  "ATMega32_Preipherals_Interfacing.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 sizedummy: ATMega32_Preipherals_Interfacing.elf
 	@echo 'Invoking: Print Size'
 	-avr-size --format=avr --mcu=atmega32 ATMega32_Preipherals_Interfacing.elf
@@ -66,10 +78,10 @@ sizedummy: ATMega32_Preipherals_Interfacing.elf
 
 # Other Targets
 clean:
-	-$(RM) $(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) ATMega32_Preipherals_Interfacing.elf
+	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) ATMega32_Preipherals_Interfacing.elf
 	-@echo ' '
 
-secondary-outputs: $(LSS) $(SIZEDUMMY)
+secondary-outputs: $(LSS) $(FLASH_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents
 

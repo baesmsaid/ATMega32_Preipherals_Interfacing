@@ -13,5 +13,6 @@
 void Lab_1(void);
 void _Lab_03_Keypad(void);
 void _Lab_04(void);
-
+void _Lab_05_LCD(void);
+void _Lab_07_ADC(void);
 #endif /* APP_H_ */
