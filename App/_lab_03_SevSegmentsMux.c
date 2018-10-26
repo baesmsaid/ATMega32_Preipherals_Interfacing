@@ -9,13 +9,13 @@
 #include "../MCAL/DIO/DIO.h"
 #include "../HAL/SevSegments/SevSegments.h"
 
-#define ENABLE_SEVSEGMENTS_1()			DIO_setPinValue(DIO_PIN_D0,DIO_Pin_low)
-#define DISABLE_SEVSEGMENTS_1()			DIO_setPinValue(DIO_PIN_D0,DIO_Pin_high)
+#define ENABLE_SEVSEGMENTS_1()			DIO_setPinValue(DIO_PIN_A7,DIO_Pin_low)
+#define DISABLE_SEVSEGMENTS_1()			DIO_setPinValue(DIO_PIN_A7,DIO_Pin_high)
 
-#define ENABLE_SEVSEGMENTS_2()			DIO_setPinValue(DIO_PIN_D1,DIO_Pin_low)
-#define DISABLE_SEVSEGMENTS_2()			DIO_setPinValue(DIO_PIN_D1,DIO_Pin_high)
+#define ENABLE_SEVSEGMENTS_2()			DIO_setPinValue(DIO_PIN_A6,DIO_Pin_low)
+#define DISABLE_SEVSEGMENTS_2()			DIO_setPinValue(DIO_PIN_A6,DIO_Pin_high)
 
-void _Lab_04(void)
+void _lab_03_SevSegmentsMux(void)
 {
 	u8 i;
 	u16 loop;
@@ -23,10 +23,10 @@ void _Lab_04(void)
 	
 	while(1)
 	{
-		for(i=0;i<100;)
+		for(i=0;i<100;i++)
 		{	
 
-			for(loop=0;loop<50;loop++)
+			for(loop=0;loop<10;loop++)
 			{
 				DISABLE_SEVSEGMENTS_2();
 				ENABLE_SEVSEGMENTS_1();

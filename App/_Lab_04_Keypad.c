@@ -9,7 +9,7 @@
 #include "../HAL/BCDSevSegments/BCDSevSegments.h"
 #include "../HAL/Keypad/Keypad.h"
 
-void _Lab_03_Keypad(void)
+void _Lab_04_Keypad(void)
 {
 	u8 PressedSw =-1;
 	DIO_init();

@@ -12,7 +12,10 @@
 #include "ADC_reg.h"
 #include "ADC.h"
 
-static u16 ADC_LastConvertedVal =0 ;
+#include <avr/interrupt.h>
+
+u16 ADC_LastConvertedVal =0 ;
+
 void ADC_init(void)
 {
 
@@ -62,10 +65,6 @@ void ADC_startConversion(ADC_Ch_t ChannelNo)
 		/*update value*/
 		ADC_LastConvertedVal = ADC;
 	}
-}
-u16 ADC_getLastConvertedVal(void)
-{
-	return ADC_LastConvertedVal;
 }
 
 void __vector_16(void) __attribute__((signal,used));

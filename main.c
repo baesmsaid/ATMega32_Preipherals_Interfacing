@@ -9,7 +9,7 @@ int main(void)
 {
     /* Replace with your application code */
 	
-	_Lab_07_ADC();
+	_Lab_08_EXTI();
 
 }
 

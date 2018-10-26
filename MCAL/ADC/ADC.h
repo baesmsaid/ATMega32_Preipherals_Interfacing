@@ -20,11 +20,14 @@ typedef enum
 	ADC_Ch7
 }ADC_Ch_t;
 
+extern u16 ADC_LastConvertedVal;
+
 void ADC_init(void);
 void ADC_enInterrupt(void);
 void ADC_diInterrupt(void);
 void ADC_startConversion(ADC_Ch_t ChannelNo);
-u16 ADC_getLastConvertedVal(void);
+
+
 
 
 #endif /* MCAL_ADC_ADC_H_ */

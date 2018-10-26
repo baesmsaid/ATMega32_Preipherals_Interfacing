@@ -10,7 +10,7 @@
 
 #define PIN_SW_1		DIO_PIN_D0
 #define PIN_LED_1		DIO_PIN_C0
-void Lab_1(void)
+void _Lab_01_DIO(void)
 {
 	DIO_init();
 	DIO_PinValue_t CurrentPinVal = DIO_Pin_low,PrevPinVal = DIO_Pin_low;

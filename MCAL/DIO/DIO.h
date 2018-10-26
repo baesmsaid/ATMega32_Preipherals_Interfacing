@@ -7,7 +7,7 @@
 
 #ifndef DIO_INT_H_
 #define DIO_INT_H_
-
+#include "../../Lib/STD_TYPES.h"
 /*PORTA*/
 #define DIO_PIN_A0			0
 #define DIO_PIN_A1			1

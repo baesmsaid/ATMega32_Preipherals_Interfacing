@@ -27,7 +27,7 @@ void _Lab_07_ADC(void)
 
 	while(1)
 	{
-		itoa(ADC_getLastConvertedVal(),str,10);
+		itoa(ADC_LastConvertedVal,str,10);
 		LCD_writeString(str,0,0);
 	}
 }

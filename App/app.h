@@ -10,9 +10,12 @@
 #define APP_H_
 
 
-void Lab_1(void);
-void _Lab_03_Keypad(void);
-void _Lab_04(void);
+void _Lab_01_DIO(void);
+void _Lab_02_SevSegments(void);
+void _lab_03_SevSegmentsMux(void);
+void _Lab_04_Keypad(void);
 void _Lab_05_LCD(void);
 void _Lab_07_ADC(void);
+void _Lab_08_EXTI(void);
+void _Lab_09_UART(void);
 #endif /* APP_H_ */

@@ -9,7 +9,7 @@
 #include "../MCAL/DIO/DIO.h"
 #include "../HAL/SevSegments/SevSegments.h"
 #include "../HAL/BCDSevSegments/BCDSevSegments.h"
-void Lab_2(void)
+void _Lab_02_SevSegments(void)
 {
 	u8 i;
 	DIO_init();

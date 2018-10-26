@@ -27,6 +27,8 @@ HAL/LCD \
 HAL/SevSegments \
 MCAL/ADC \
 MCAL/DIO \
+MCAL/EXTI \
 MCAL/GIE \
+MCAL/UART \
 . \
 
