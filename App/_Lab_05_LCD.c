@@ -14,10 +14,15 @@ void _Lab_05_LCD(void)
 
 	DIO_init();
 	LCD_init();
+	LCD_wrtiteData('a');
+	LCD_wrtiteData('h');
+	LCD_wrtiteData('m');
+	LCD_wrtiteData('e');
+	LCD_wrtiteData('d');
 	while(1)
 	{
 
-		LCD_writeString("Hello",0,0);
+
 
 	}
 

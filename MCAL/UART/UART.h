@@ -8,7 +8,6 @@
 #ifndef SYSTEM_COTS_MCAL_UART_UART_INT_H_
 #define SYSTEM_COTS_MCAL_UART_UART_INT_H_
 
-#define UART_MSG_BUFFER_SIZE		1000
 
 void  UART_init(void);
 void UART_sendByte(u8 DataToSendCpy);

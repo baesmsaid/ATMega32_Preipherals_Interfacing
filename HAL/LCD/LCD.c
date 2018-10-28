@@ -61,7 +61,7 @@ void LCD_wrtiteData(u8 u8DataCpy){
 	/* set RS to high  */
 	DIO_setPinValue(LCD_u8_RS_PIN,DIO_Pin_high);
 	/* Execute command */
-	voidLcdExecute(u8DataCpy);
+	LCD_excute(u8DataCpy);
 }
 
 /********************************************* ***/
@@ -73,7 +73,7 @@ void LCD_writeCommand(u8 u8CommandCpy){
 	/* set RS to LOW */
 	DIO_setPinValue(LCD_u8_RS_PIN,DIO_Pin_low);
 	/* Execute command */
-	voidLcdExecute(u8CommandCpy);
+	LCD_excute(u8CommandCpy);
 }
 
 void LCD_writeString(u8 *ptr, u8 xpos, u8 ypos)
@@ -95,31 +95,7 @@ void LCD_clear()
 	//	_delay_ms(1.5);
 }
 
-void LCD_savePattern(u8 *ptrPatternCpy,u8 u8CGRAMAddrCpy){
-	/*NOTE: step in CGRAM = 8 */
-	u8CGRAMAddrCpy *= 8;
-	/*set CGRAM Address*/
-	LCD_writeCommand(0b01000000 | u8CGRAMAddrCpy );
-
-	LCD_wrtiteData(ptrPatternCpy[0]);
-	LCD_wrtiteData(ptrPatternCpy[1]);
-	LCD_wrtiteData(ptrPatternCpy[2]);
-	LCD_wrtiteData(ptrPatternCpy[3]);
-	LCD_wrtiteData(ptrPatternCpy[4]);
-	LCD_wrtiteData(ptrPatternCpy[5]);
-	LCD_wrtiteData(ptrPatternCpy[6]);
-	LCD_wrtiteData(ptrPatternCpy[7]);
-
-}
-
-void LCD_displayPattern(u8 u8CGRAMAddrCpy,  u8 xpos, u8 ypos){
-	/*set DDRAM address*/
-	LCD_writeCommand((0x80 | ypos<<6 | xpos));
-	LCD_wrtiteData(u8CGRAMAddrCpy);
-}
-
-
-static void voidLcdExecute(u8 u8ValueCpy){
+static void LCD_excute(u8 u8ValueCpy){
 
 	/*set RW to low */
 	DIO_setPinValue(LCD_u8_RW_PIN,DIO_Pin_low);
@@ -164,19 +140,3 @@ static void voidLcdExecute(u8 u8ValueCpy){
 #endif
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

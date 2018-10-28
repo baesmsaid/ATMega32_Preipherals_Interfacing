@@ -22,6 +22,7 @@
  * determine received message buffer size
  *
  * */
+#define UART_MSG_BUFFER_SIZE		1000
 
 
 

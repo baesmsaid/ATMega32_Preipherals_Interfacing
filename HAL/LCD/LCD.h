@@ -28,7 +28,6 @@ extern void LCD_writeCommand(u8 u8CommandCpy);
 
 extern void LCD_writeString(u8 *ptr, u8 xpos, u8 ypos);
 extern void LCD_clear();
-extern void LCD_savePattern(u8 *ptrPatternCpy,u8 u8CGRAMAddrCpy);
-extern void LCD_displayPattern(u8 u8CGRAMAddrCpy,  u8 xpos, u8 ypos);
+
 
 #endif
