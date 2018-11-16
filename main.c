@@ -5,11 +5,11 @@
  * Author : MuhammadElzeiny
  */ 
 #include "App/app.h"
-int main(void)
+void main(void)
 {
     /* Replace with your application code */
 	
-	_Lab_05_LCD();
+	_Lab_11_Scheduler();
 
 }
 

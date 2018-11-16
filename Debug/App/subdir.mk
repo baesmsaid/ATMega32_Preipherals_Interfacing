@@ -11,6 +11,8 @@ C_SRCS += \
 ../App/_Lab_07_ADC.c \
 ../App/_Lab_08_EXTI.c \
 ../App/_Lab_09_UART.c \
+../App/_Lab_10_TIMER0.c \
+../App/_Lab_11_Scheduler.c \
 ../App/_lab_03_SevSegmentsMux.c 
 
 OBJS += \
@@ -21,6 +23,8 @@ OBJS += \
 ./App/_Lab_07_ADC.o \
 ./App/_Lab_08_EXTI.o \
 ./App/_Lab_09_UART.o \
+./App/_Lab_10_TIMER0.o \
+./App/_Lab_11_Scheduler.o \
 ./App/_lab_03_SevSegmentsMux.o 
 
 C_DEPS += \
@@ -31,6 +35,8 @@ C_DEPS += \
 ./App/_Lab_07_ADC.d \
 ./App/_Lab_08_EXTI.d \
 ./App/_Lab_09_UART.d \
+./App/_Lab_10_TIMER0.d \
+./App/_Lab_11_Scheduler.d \
 ./App/_lab_03_SevSegmentsMux.d 
 
 

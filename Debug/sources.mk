@@ -24,11 +24,14 @@ App \
 HAL/BCDSevSegments \
 HAL/Keypad \
 HAL/LCD \
+HAL/SWITCH \
 HAL/SevSegments \
 MCAL/ADC \
 MCAL/DIO \
 MCAL/EXTI \
 MCAL/GIE \
+MCAL/TIMER0 \
 MCAL/UART \
+Scheduler \
 . \
 
