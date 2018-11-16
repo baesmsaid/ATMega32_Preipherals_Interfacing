@@ -8,19 +8,20 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Scheduler/subdir.mk
--include MCAL/UART/subdir.mk
--include MCAL/TIMER0/subdir.mk
--include MCAL/GIE/subdir.mk
--include MCAL/EXTI/subdir.mk
--include MCAL/DIO/subdir.mk
--include MCAL/ADC/subdir.mk
--include HAL/SevSegments/subdir.mk
--include HAL/SWITCH/subdir.mk
--include HAL/LCD/subdir.mk
--include HAL/Keypad/subdir.mk
--include HAL/BCDSevSegments/subdir.mk
--include App/subdir.mk
+-include src/Scheduler/subdir.mk
+-include src/MCAL/UART/subdir.mk
+-include src/MCAL/TIMER0/subdir.mk
+-include src/MCAL/GIE/subdir.mk
+-include src/MCAL/EXTI/subdir.mk
+-include src/MCAL/DIO/subdir.mk
+-include src/MCAL/ADC/subdir.mk
+-include src/HAL/SevSegments/subdir.mk
+-include src/HAL/SWITCH/subdir.mk
+-include src/HAL/LCD/subdir.mk
+-include src/HAL/Keypad/subdir.mk
+-include src/HAL/BCDSevSegments/subdir.mk
+-include src/App/subdir.mk
+-include src/subdir.mk
 -include subdir.mk
 -include objects.mk
 

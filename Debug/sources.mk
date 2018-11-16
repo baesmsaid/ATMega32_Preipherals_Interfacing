@@ -20,18 +20,18 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-App \
-HAL/BCDSevSegments \
-HAL/Keypad \
-HAL/LCD \
-HAL/SWITCH \
-HAL/SevSegments \
-MCAL/ADC \
-MCAL/DIO \
-MCAL/EXTI \
-MCAL/GIE \
-MCAL/TIMER0 \
-MCAL/UART \
-Scheduler \
-. \
+src/App \
+src/HAL/BCDSevSegments \
+src/HAL/Keypad \
+src/HAL/LCD \
+src/HAL/SWITCH \
+src/HAL/SevSegments \
+src/MCAL/ADC \
+src/MCAL/DIO \
+src/MCAL/EXTI \
+src/MCAL/GIE \
+src/MCAL/TIMER0 \
+src/MCAL/UART \
+src/Scheduler \
+src \
 
