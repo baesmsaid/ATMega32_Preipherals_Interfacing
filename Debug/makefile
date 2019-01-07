@@ -11,6 +11,7 @@ RM := rm -rf
 -include src/Scheduler/subdir.mk
 -include src/MCAL/UART/subdir.mk
 -include src/MCAL/TIMER0/subdir.mk
+-include src/MCAL/SPI/subdir.mk
 -include src/MCAL/GIE/subdir.mk
 -include src/MCAL/EXTI/subdir.mk
 -include src/MCAL/DIO/subdir.mk
@@ -20,7 +21,7 @@ RM := rm -rf
 -include src/HAL/LCD/subdir.mk
 -include src/HAL/Keypad/subdir.mk
 -include src/HAL/BCDSevSegments/subdir.mk
--include src/App/subdir.mk
+-include src/App_Labs/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

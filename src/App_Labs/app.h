@@ -17,8 +17,12 @@ void _Lab_04_Keypad(void);
 void _Lab_05_LCD(void);
 void _Lab_07_ADC(void);
 void _Lab_08_EXTI(void);
-void _Lab_09_UART(void);
+void _Lab_13_UART(void);
 void _Lab_10_TIMER0(void);
 void _Lab_11_Scheduler(void);
+void _Lab_12_PwmMeter(void);
+void _Lab_13_UART(void);
+void _Lab_14_SPI(void);
+void _Lab_15_I2C(void);
 
 #endif /* APP_H_ */

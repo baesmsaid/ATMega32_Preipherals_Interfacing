@@ -9,7 +9,7 @@
 #define SYSTEM_COTS_MCAL_UART_UART_INT_H_
 
 
-void  UART_init(void);
+void UART_init(void);
 void UART_sendByte(u8 DataToSendCpy);
 void UART_getMessage(u8* MsgPtr,u16* Length);
 

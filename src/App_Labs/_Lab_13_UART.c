@@ -13,7 +13,7 @@
 #include "../HAL/LCD/LCD.h"
 #include "../MCAL/GIE/GIE.h"
 
-void _Lab_09_UART(void)
+void _Lab_13_UART(void)
 {
 	u16 i;
 	u8 MsgPtr[16];
@@ -34,7 +34,7 @@ void _Lab_09_UART(void)
 		{
 			LCD_wrtiteData(MsgPtr[i]);
 		}
-		_delay_ms(10000);
+		_delay_ms(2000);
 	}
 
 }

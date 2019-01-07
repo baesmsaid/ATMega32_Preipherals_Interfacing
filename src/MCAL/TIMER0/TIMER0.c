@@ -7,7 +7,6 @@
 #include "../../Lib/BIT_MATH.h"
 #include "../../Lib/STD_TYPES.h"
 #include "../../MCAL/DIO/DIO.h"
-#include "../../Scheduler/Scheduler.h"
 #include "TIMER0_reg.h"
 #include "TIMER0_priv.h"
 #include "TIMER0_config.h"
@@ -66,11 +65,27 @@ void TIMER0_setCallBackFunc(void(*funcPtr)(void))
 	CallBackFuncPtr = funcPtr;
 }
 
+u32 TIMER0_getTime_us(void)
+{
+	u32 Time_us = 0 ;
+	/*implement function to get time in micro-seconds*/
+
+
+
+	return Time_us;
+}
+void TIMER0_initCounter(u8 val)
+{
+#if TIMER0_MODE_SELECTOR_MSK == TIMER0_MODE_NORMAL_MSK
+	TCNT0 = 0;
+#endif
+}
+
 /*ISR for CTC mode*/
 void __vector_10(void)__attribute__((signal,used));
 void __vector_10(void)
 {
-	Scheduler_start();
+	CallBackFuncPtr();
 }
 
 /*ISR for overflow mode*/

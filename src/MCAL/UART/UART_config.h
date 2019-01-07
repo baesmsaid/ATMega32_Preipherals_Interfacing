@@ -1,7 +1,14 @@
 #ifndef UART_CONFIG_H
 #define UART_CONFIG_H
 
-#define UART_DATA_LENGTH	UART_DATA_LENGTH_8
+/****************************************************/
+/*	choose between the following to configure parity*/
+/*			UART_DATA_LENGTH_5_MSK					*/
+/* 			UART_DATA_LENGTH_6_MSK					*/
+/* 			UART_DATA_LENGTH_7_MSK					*/
+/* 			UART_DATA_LENGTH_8_MSK					*/
+/****************************************************/
+#define UART_DATA_LENGTH	UART_DATA_LENGTH_8_MSK
 
 /****************************************************/
 /*	choose between the following to configure parity*/
